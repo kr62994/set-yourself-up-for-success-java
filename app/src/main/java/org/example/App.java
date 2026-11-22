@@ -3,12 +3,18 @@
  */
 package org.example;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.ArrayList;
+import java.util.List;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        DuplicateRemover duplicateRemover = new DuplicateRemover();
+
+        System.out.println(duplicateRemover.removeDuplicates(new ArrayList<Integer>()));
+        System.out.println(duplicateRemover.removeDuplicates(new ArrayList<>(List.of(1))));
+        System.out.println(duplicateRemover.removeDuplicates(new ArrayList<>(List.of(1, 2, 3))));
+        System.out.println(duplicateRemover.removeDuplicates(new ArrayList<>(List.of("A", "A", "B"))));
+        System.out.println(duplicateRemover.removeDuplicates(new ArrayList<>(List.of(1, 1, 3, 3, 5, 5))));
+
     }
 }
